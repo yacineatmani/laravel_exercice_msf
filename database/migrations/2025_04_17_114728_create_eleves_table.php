@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('eleves', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nom', 30); // Colonne 'nom' avec une limite de 30 caractères
+            $table->string('prenom', 30); // Colonne 'prenom' avec une limite de 30 caractères
+            $table->integer('age'); // Colonne 'age'
+            $table->boolean('demandeur_emploi'); // Colonne 'demandeur_emploi'
+            $table->timestamps(); // Colonnes 'created_at' et 'updated_at'
         });
     }
 

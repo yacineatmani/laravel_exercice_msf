@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('formations', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nom', 30); // Colonne 'nom' avec une limite de 30 caractères
+            $table->text('description'); // Colonne 'description'
+            $table->timestamps(); // Colonnes 'created_at' et 'updated_at'
         });
     }
 
